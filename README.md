@@ -1,10 +1,10 @@
 # karma-benchmark-example
-> A karma-benchmark example
+> A karma-benchmark example with gulp
 
 
 ## What is this?
 
-This is a simple example that shows how to use `karma-benchmark` with the `karma-benchmark-reporter` and `karma-junit-reporter` reporters.
+This is a simple example that shows how to use `karma-benchmark` with the `karma-benchmark-reporter`.
 
 It pits native Array methods against a home-made utility library.
 
@@ -17,34 +17,18 @@ First, install dependencies:
 npm install
 ```
 
-## Run all browsers
+## Run all benchmarks
 
-This will run benchmarks in Chrome and Firefox:
+This will run benchmarks:
 
 ```shell
-grunt bench
+gulp bench
 ```
 
-## Run a single browser
+## Watch benchmarks
 
-You can pass `chrome` or `firefox`.
-
-```shell
-grunt bench:chrome
-```
-
-## Run directly from Karma
-
-Grunt is not required. You can simply run Karma directly:
+This will watch files and run benchmarks benchmarks:
 
 ```shell
-karma start
-```
-
-## CI run with JUnit report
-
-This will run benchmarks in PhantomJS and write test results to `results/junit-benchmark-results.xml`:
-
-```shell
-grunt bench:ci
+gulp watch
 ```
